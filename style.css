@@ -15,10 +15,12 @@ h1 {
 }
 
 form {
-  padding: 30px;
+  display: flex;
+}
+.form-container {
+  padding: 30px 30px 20px 30px;
   background-color: #f3d0d7;
   border-radius: 10px;
-  display: flex;
   box-shadow: 0px 4px 15px 0px rgba(39, 33, 66, 0.15);
   margin-bottom: 30px;
 }
@@ -54,6 +56,12 @@ footer {
   border: 1px solid #6c0345;
   width: 150px;
 }
+.hint {
+  opacity: 0.4;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-top: 5px;
+}
 .poem {
   font-size: 16px;
   background-color: #f3d0d7;
@@ -64,4 +72,21 @@ footer {
 }
 .poem strong {
   color: #6c0345;
+}
+.hidden {
+  display: none;
+}
+.blink {
+  animation: blink-animation 1s steps(5, start) infinite;
+}
+
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
 }
